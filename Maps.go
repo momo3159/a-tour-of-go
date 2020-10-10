@@ -10,11 +10,13 @@ func WordCount(s string) map[string]int {
 	wordsDist := make(map[string]int)
 	
 	for _, word := range words {
-	  if _, ok := wordsDist[word]; !ok{
-	    wordsDist[word] = 1
-	  } else {
-	    wordsDist[word] += 1
-	  }
+	//   if _, ok := wordsDist[word]; !ok{
+	//     wordsDist[word] = 1
+	//   } else {
+	//     wordsDist[word] += 1
+	//   }
+
+	wordDist[word]++ // ゼロ値の利用
 	}
 	
 	return wordsDist
@@ -23,4 +25,3 @@ func WordCount(s string) map[string]int {
 func main() {
 	wc.Test(WordCount)
 }
-
